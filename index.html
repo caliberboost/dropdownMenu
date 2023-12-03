@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px;
+  z-index: 1;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn" onclick="toggleDropdown()">Digital Services</button>
+  <div class="dropdown-content" id="dropdownMenu">
+    <p>Service 1</p>
+    <p>Service 2</p>
+    <p>Service 3</p>
+    <!-- Add more services as needed -->
+  </div>
+</div>
+
+<script>
+function toggleDropdown() {
+  var dropdownContent = document.getElementById("dropdownMenu");
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "block";
